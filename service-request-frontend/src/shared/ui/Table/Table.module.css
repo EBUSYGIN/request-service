@@ -1,0 +1,144 @@
+.wrapper {
+  width: 100%;
+  overflow-x: auto;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--neutral-line);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.th {
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ghost);
+  background: var(--neutral-100);
+  border-bottom: 1px solid var(--neutral-line);
+  white-space: nowrap;
+}
+
+.th:first-child {
+  border-radius: 12px 0 0 0;
+}
+
+.th:last-child {
+  border-radius: 0 12px 0 0;
+}
+
+.td {
+  padding: 16px 20px;
+  font-size: 14px;
+  color: var(--secondary-black);
+  border-bottom: 1px solid var(--neutral-line);
+  vertical-align: middle;
+}
+
+.tr {
+  transition: background-color 0.2s ease;
+}
+
+.tr:hover {
+  background: var(--neutral-100);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background: var(--approved-light);
+}
+
+.empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--ghost);
+  font-size: 14px;
+}
+
+/* Статусы */
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.statusNew {
+  background: rgba(0, 133, 255, 0.1);
+  color: var(--approved);
+}
+
+.statusInProgress {
+  background: rgba(255, 193, 7, 0.15);
+  color: #b78800;
+}
+
+.statusCompleted {
+  background: rgba(8, 135, 93, 0.1);
+  color: var(--success);
+}
+
+.statusCancelled {
+  background: rgba(224, 45, 60, 0.1);
+  color: var(--warning);
+}
+
+/* Пагинация */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-top: 1px solid var(--neutral-line);
+}
+
+.paginationInfo {
+  font-size: 14px;
+  color: var(--ghost);
+}
+
+.paginationButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.pageButton {
+  padding: 8px 14px;
+  border: 1px solid var(--neutral-line);
+  background: var(--white);
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--secondary-black);
+}
+
+.pageButton:hover:not(:disabled) {
+  border-color: var(--approved);
+  color: var(--approved);
+}
+
+.pageButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageButtonActive {
+  background: var(--approved);
+  border-color: var(--approved);
+  color: var(--white);
+}
+

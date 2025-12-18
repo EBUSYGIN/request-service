@@ -1,0 +1,23 @@
+.white {
+  color: var(--white);
+}
+
+.black {
+  color: var(--black);
+}
+
+.l {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 167%;
+  letter-spacing: -0.02em;
+}
+
+.xl {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 120%;
+  color: var(--secondary-black);
+  letter-spacing: -0.02em;
+}

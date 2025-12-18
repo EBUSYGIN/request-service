@@ -1,0 +1,9 @@
+.pageTitle {
+  margin-bottom: 15px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

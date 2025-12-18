@@ -1,0 +1,60 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--secondary-black);
+}
+
+.textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--neutral-line);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--secondary-black);
+  background: var(--white);
+  transition: all 0.2s ease;
+  outline: none;
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+.textarea:hover {
+  border-color: var(--approved);
+}
+
+.textarea:focus {
+  border-color: var(--approved);
+  box-shadow: 0 0 0 4px var(--approved-light);
+}
+
+.textarea::placeholder {
+  color: var(--ghost);
+}
+
+.invalid {
+  border-color: var(--warning);
+}
+
+.invalid:focus {
+  border-color: var(--warning);
+  box-shadow: 0 0 0 3px rgba(224, 45, 60, 0.15);
+}
+
+.error {
+  font-size: 13px;
+  color: var(--warning);
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+}
+

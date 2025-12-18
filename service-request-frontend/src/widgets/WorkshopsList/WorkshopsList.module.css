@@ -1,0 +1,11 @@
+.productsList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-top: 1px solid var(--neutral-line-200);
+  padding-top: 20px;
+}
+
+.listTitle {
+  margin-bottom: 48px;
+}

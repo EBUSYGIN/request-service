@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+
+}
+
+model Role {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  users User[]
+}
+
+model User {
+  id           Int    @id @default(autoincrement())
+  fio          String
+  phone        String
+  login        String @unique
+  passwordHash String
+  roleId       Int
+  role         Role   @relation(fields: [roleId], references: [id])
+
+  clientRequests ServiceRequest[] @relation("ClientRequests")
+  masterRequests ServiceRequest[] @relation("MasterRequests")
+  comments       RequestComment[]
+}
+
+model EquipmentType {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  models EquipmentModel[]
+}
+
+model EquipmentModel {
+  id              Int           @id @default(autoincrement())
+  name            String
+  equipmentTypeId Int
+  equipmentType   EquipmentType @relation(fields: [equipmentTypeId], references: [id])
+  equipments      Equipment[]
+
+  @@unique([name, equipmentTypeId])
+}
+
+model Equipment {
+  id       Int            @id @default(autoincrement())
+  modelId  Int
+  model    EquipmentModel @relation(fields: [modelId], references: [id])
+  requests ServiceRequest[]
+}
+
+model RequestStatus {
+  id      Int             @id @default(autoincrement())
+  name    String          @unique
+  requests ServiceRequest[]
+}
+
+model ServiceRequest {
+  id                 Int            @id @default(autoincrement())
+  number             Int            @unique
+  startDate          DateTime
+  completionDate     DateTime?
+  problemDescription String
+  statusId           Int
+  status             RequestStatus  @relation(fields: [statusId], references: [id])
+  equipmentId        Int?
+  equipment          Equipment?     @relation(fields: [equipmentId], references: [id])
+  clientId           Int
+  client             User           @relation("ClientRequests", fields: [clientId], references: [id])
+  masterId           Int?
+  master             User?          @relation("MasterRequests", fields: [masterId], references: [id])
+  repairParts        String?
+  comments           RequestComment[]
+}
+
+model RequestComment {
+  id        Int            @id @default(autoincrement())
+  message   String
+  createdAt DateTime       @default(now())
+  requestId Int
+  request   ServiceRequest @relation(fields: [requestId], references: [id])
+  authorId  Int
+  author    User           @relation(fields: [authorId], references: [id])
+}

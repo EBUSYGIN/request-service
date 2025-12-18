@@ -1,0 +1,147 @@
+.button {
+  background-color: var(--white);
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ghost {
+  background-color: var(--ghost);
+  color: var(--white);
+}
+
+.primary {
+  background-color: var(--approved);
+  color: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 133, 255, 0.2);
+}
+
+.primary:hover:not(:disabled) {
+  background-color: #0066cc;
+  box-shadow: 0 4px 12px rgba(0, 133, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 133, 255, 0.25);
+}
+
+.boxed {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.s {
+  padding: 12px;
+  text-align: center;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.sm {
+  padding: 15px 16px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.m {
+  padding: 19px 44px;
+}
+
+.border-black {
+  border: 1px solid var(--black);
+}
+
+.border-ghost {
+  border: 1px solid var(--neutral-200);
+}
+
+.none {
+  border: none;
+}
+
+.default {
+  border: 1px solid var(--neutral-400);
+  background-color: var(--white);
+}
+
+.default:hover:not(:disabled) {
+  border-color: var(--approved);
+  color: var(--approved);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.default:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.danger {
+  background-color: var(--warning);
+  color: var(--white);
+}
+
+.blue {
+  background-color: var(--blue);
+  color: var(--white);
+  box-shadow: 0 2px 8px rgba(9, 62, 140, 0.2);
+}
+
+.blue:hover:not(:disabled) {
+  background-color: #072d6b;
+  box-shadow: 0 4px 12px rgba(9, 62, 140, 0.3);
+  transform: translateY(-1px);
+}
+
+.blue:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(9, 62, 140, 0.25);
+}
+
+.danger:hover:not(:disabled) {
+  background-color: #c0262e;
+  box-shadow: 0 4px 12px rgba(224, 45, 60, 0.3);
+  transform: translateY(-1px);
+}
+
+.danger:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(224, 45, 60, 0.25);
+}
+
+.ghost-blue {
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.ghost-blue:hover:not(:disabled) {
+  background-color: rgba(9, 62, 140, 0.1);
+  border-color: #072d6b;
+  transform: translateY(-1px);
+}
+
+.ghost-blue:active:not(:disabled) {
+  transform: translateY(0);
+}

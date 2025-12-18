@@ -1,0 +1,100 @@
+.page {
+  padding: 32px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--secondary-black);
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--neutral-line);
+}
+
+.filterItem {
+  min-width: 180px;
+}
+
+.filterActions {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.tableWrapper {
+  margin-bottom: 20px;
+}
+
+.clientCell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.clientName {
+  font-weight: 500;
+}
+
+.clientPhone {
+  font-size: 12px;
+  color: var(--ghost);
+}
+
+.masterCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.noMaster {
+  color: var(--ghost);
+  font-style: italic;
+}
+
+.actionsCell {
+  display: flex;
+  gap: 8px;
+}
+
+/* Модальное окно создания */
+.formGrid {
+  display: grid;
+  gap: 16px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+  
+  .filterItem {
+    width: 100%;
+  }
+  
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
+

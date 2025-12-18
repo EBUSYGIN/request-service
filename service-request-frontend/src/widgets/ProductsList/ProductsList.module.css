@@ -1,0 +1,13 @@
+.productsList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-top: 1px solid var(--neutral-line);
+  padding-top: 24px;
+}
+
+.listTitle {
+  margin-bottom: 48px;
+  color: var(--secondary-black);
+  letter-spacing: -0.02em;
+}

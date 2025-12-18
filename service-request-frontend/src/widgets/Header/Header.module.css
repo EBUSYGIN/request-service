@@ -1,0 +1,66 @@
+.header {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--body-background);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid var(--neutral-line);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--secondary-black);
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.userBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.userName {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.2;
+  color: var(--secondary-black);
+}
+
+.userRole {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 11px;
+  color: var(--approved);
+  background: var(--approved-light);
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.logoutButton {
+  padding: 8px 16px;
+}

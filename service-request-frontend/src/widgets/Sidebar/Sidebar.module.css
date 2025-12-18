@@ -1,0 +1,30 @@
+.sidebar {
+  min-width: 264px;
+  padding: 24px 28px 67px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.06);
+  background: var(--body-background);
+  height: 100vh;
+  border-right: 1px solid var(--neutral-line);
+  position: sticky;
+  top: 0;
+}
+
+.companyInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--secondary-black);
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+}

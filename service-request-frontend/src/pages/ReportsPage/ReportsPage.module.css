@@ -1,0 +1,163 @@
+.page {
+  padding: 32px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--secondary-black);
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--neutral-line);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.statCard {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--neutral-line);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.statCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.statIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.statIconBlue {
+  background: var(--approved-light);
+  color: var(--approved);
+}
+
+.statIconGreen {
+  background: rgba(8, 135, 93, 0.1);
+  color: var(--success);
+}
+
+.statIconOrange {
+  background: rgba(255, 152, 0, 0.1);
+  color: #ff9800;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: var(--ghost);
+  font-weight: 500;
+}
+
+.statValue {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--secondary-black);
+  line-height: 1;
+}
+
+.statUnit {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--ghost);
+  margin-left: 4px;
+}
+
+/* Таблица по проблемам */
+.problemsSection {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--neutral-line);
+  overflow: hidden;
+}
+
+.problemsHeader {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--neutral-line);
+  background: var(--neutral-100);
+}
+
+.problemsTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--secondary-black);
+  margin: 0;
+}
+
+.problemsContent {
+  padding: 0;
+}
+
+.problemRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--neutral-line);
+}
+
+.problemRow:last-child {
+  border-bottom: none;
+}
+
+.problemDescription {
+  font-size: 14px;
+  color: var(--secondary-black);
+  flex: 1;
+}
+
+.problemCount {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--approved);
+  background: var(--approved-light);
+  padding: 4px 12px;
+  border-radius: 20px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.emptyState {
+  padding: 40px;
+  text-align: center;
+  color: var(--ghost);
+}
+
+/* Загрузка */
+.loadingCard {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

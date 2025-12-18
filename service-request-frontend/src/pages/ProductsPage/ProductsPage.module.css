@@ -1,0 +1,13 @@
+.pageTitle {
+  margin-bottom: 24px;
+  color: var(--secondary-black);
+  letter-spacing: -0.02em;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
